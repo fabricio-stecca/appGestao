@@ -5,7 +5,11 @@ import java.io.*;          // Para manipulação de arquivos (input e output)
 import java.util.ArrayList; // Para uso de vetores dinâmicos (ArrayList)
 import java.util.Map;
 
-import usuarios.Pessoa;
+
+import usuarios.Aluno;
+import usuarios.Professor;
+import elementos.Disciplina;
+import elementos.Turma;
 
 
 /**
@@ -15,15 +19,36 @@ import usuarios.Pessoa;
 public class AppGestao {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner scanner = new Scanner(System.in);
         
-       Pessoa pessoa = new Pessoa(1, "João da Silva", 25, "Masculino", "joao.silva@email.com");
-
-        // Exibindo as informações da pessoa
-        System.out.println("ID: " + pessoa.getId());
-        System.out.println("Nome: " + pessoa.getNome());
-        System.out.println("Idade: " + pessoa.getIdade());
-        System.out.println("Sexo: " + pessoa.getSexo());
-        System.out.println("Email: " + pessoa.getEmail());
+        ArrayList<Disciplina> disciplinasCadastradas = new ArrayList<>();
+        ArrayList<Aluno> alunosCadastrados = new ArrayList<>();
+        ArrayList<Professor> professoresCadastrados = new ArrayList<>();
+        ArrayList<Turma> turmasCadastradas = new ArrayList<>();
+        
+        disciplinasCadastradas.add( new Disciplina("Algoritimos", 40) );
+        disciplinasCadastradas.add( new Disciplina("POO", 40) );
+        disciplinasCadastradas.add( new Disciplina("AOC", 40) );
+        
+        while(true){
+            
+        System.out.println("1- Exibir Alunos Cadastrados\n");
+        System.out.println("2- Exibir Professores Cadastrados\n");
+        System.out.println("3- Exibir Todas As Turmas Cadastradas\n");
+        System.out.println("--------------------------------------\n");
+        System.out.println("4- Cadastrar Aluno\n");
+        System.out.println("5- Cadastrar Professor\n");
+        System.out.println("-----------------------------------------\n");
+        System.out.println("6- Exibir Opções de Aluno\n");
+        System.out.println("7- Exibir Opções de Professor\n");
+        System.out.println("---------------------------------------\n");
+        System.out.println("0- Sair\n"); 
+        
+        int input = scanner.nextInt();
+        scanner.nextLine();
+        
+        }
+        
+        
     }
 }
